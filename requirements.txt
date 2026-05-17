@@ -1,5 +1,5 @@
-fastapi 
-uvicorn 
-chromadb 
-ollama 
-pydantic 
+fastapi
+uvicorn[standard]
+chromadb
+ollama
+pydantic
