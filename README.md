@@ -69,6 +69,15 @@ venv\Scripts\activate.bat
 uvicorn main:app --reload
 ```
 
+
+-----
+cd C:\Users\ali05\skobot
+venv\Scripts\activate.bat
+uvicorn main:app --reload
+-----
+
+
+
 ### 3. Åbn browseren
 Gå til:
 ```
