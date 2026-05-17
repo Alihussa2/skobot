@@ -1,0 +1,79 @@
+SKO 1
+Navn: Nike Air Zoom Pegasus
+Type: Løbesko
+Pris: 899 kr
+Størrelser: 36-48
+Billede: https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600&q=80
+Beskrivelse: Professionel løbesko til asfalt og byløb. ReactX skum giver overlegen stødabsorbering og energiretur. Åndbart mesh øvre holder fødderne kølige. Ideel til daglig træning og halvmaraton.
+
+SKO 2
+Navn: Salomon Speedcross 6
+Type: Trailsko
+Pris: 1099 kr
+Størrelser: 38-47
+Billede: https://images.unsplash.com/photo-1606107557195-0e29a4b5b4aa?w=600&q=80
+Beskrivelse: Ikonisk trailsko til teknisk terræn og mudrede ruter. Aggressive chevron-knopper giver overlegen vejgreb. Sensifit snøresystem låser foden perfekt fast. Til erfarne trail-løbere.
+
+SKO 3
+Navn: Clarks Desert Boot
+Type: Hverdagssko
+Pris: 799 kr
+Størrelser: 38-46
+Billede: https://images.unsplash.com/photo-1560769629-975ec94e6a86?w=600&q=80
+Beskrivelse: Tidløs desert boot i premium nubuck læder. Crepe-sål giver blød og behagelig gang. Et klassisk ikon siden 1950 der aldrig går af mode. Perfekt til kontor og afslappede lejligheder.
+
+SKO 4
+Navn: Adidas Ultraboost 23
+Type: Træningssko
+Pris: 1299 kr
+Størrelser: 36-47
+Billede: https://images.unsplash.com/photo-1587563871167-1ee9c731aefb?w=600&q=80
+Beskrivelse: Premium træningssko med Boost-teknologi der returnerer energi ved hvert skridt. Primeknit øvre former sig efter din fod. Perfekt til løb, gym og hverdagsbrug i ét.
+
+SKO 5
+Navn: Geox Respira Junior
+Type: Børnesko
+Pris: 499 kr
+Størrelser: 28-36
+Billede: https://images.unsplash.com/photo-1514989940723-e8e51635b782?w=600&q=80
+Beskrivelse: Patenteret åndbar teknologi holder barnets fødder tørre og komfortable. Let konstruktion støtter den naturlige forudvikling. Slidstærk gummisål til aktive børn.
+
+SKO 6
+Navn: Jimmy Choo Romy
+Type: Festsko
+Pris: 2499 kr
+Størrelser: 36-42
+Billede: https://images.unsplash.com/photo-1543163521-1bf539c55dd2?w=600&q=80
+Beskrivelse: Elegant stilet i luksus suede med 85mm hæl. Håndlavet i Italien med premium materialer. Det ultimative valg til galla, bryllupper og eksklusive events.
+
+SKO 7
+Navn: Merrell Moab 3 GTX
+Type: Vandresko
+Pris: 1399 kr
+Størrelser: 37-48
+Billede: https://images.unsplash.com/photo-1595341888016-a392ef81b7de?w=600&q=80
+Beskrivelse: Vandtæt Gore-Tex membran holder fødderne tørre i alt slags vejr. Vibram-sål med overlegen vejgreb på sten og mudder. M Select DRY teknologi til krævende vandreture.
+
+SKO 8
+Navn: New Balance 574
+Type: Sneakers
+Pris: 849 kr
+Størrelser: 36-47
+Billede: https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=600&q=80
+Beskrivelse: Ikonisk sneaker med ENCAP-mellemsål der kombinerer stil og komfort. Suede og mesh øvre i tidløst retro design. En New Balance klassiker der aldrig går af mode.
+
+SKO 9
+Navn: UGG Classic Short
+Type: Støvle
+Pris: 1699 kr
+Størrelser: 36-44
+Billede: https://images.unsplash.com/photo-1603808033192-082d6919d3e1?w=600&q=80
+Beskrivelse: Ikonisk australsk fåreskindsstøvle med Twin-Face sheepskin. Naturligt åndbart materiale holder temperaturen behagelig hele året. Et must-have til vinterstilen.
+
+SKO 10
+Navn: Asics Metaspeed Sky+
+Type: Konkurrencesko
+Pris: 2199 kr
+Størrelser: 39-46
+Billede: https://images.unsplash.com/photo-1539185441755-769473a23570?w=600&q=80
+Beskrivelse: Elite-konkurrencesko med FF BLAST TURBO skum og kulstofffiberplade. Designet til at bryde personlige rekorder. Brugt af verdens bedste maratonløbere til store løb.

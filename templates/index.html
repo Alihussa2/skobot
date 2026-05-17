@@ -1,0 +1,1195 @@
+<!DOCTYPE html>
+<html lang="da">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SKOBOT — Premium Footwear</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --ink: #0a0a0a;
+            --cream: #f7f4ef;
+            --warm: #e8e2d9;
+            --accent: #c8402a;
+            --accent2: #d4956a;
+            --muted: #8a8078;
+            --white: #ffffff;
+            --card: #ffffff;
+            --serif: 'Playfair Display', Georgia, serif;
+            --sans: 'DM Sans', system-ui, sans-serif;
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; }
+
+        body {
+            font-family: var(--sans);
+            background: var(--cream);
+            color: var(--ink);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ─────────────────────────────── */
+        header {
+            background: var(--ink);
+            padding: 0 60px;
+            height: 68px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 0;
+            z-index: 500;
+        }
+
+        .logo {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .logo em {
+            color: var(--accent2);
+            font-style: normal;
+        }
+
+        nav {
+            display: flex;
+            gap: 36px;
+        }
+
+        nav a {
+            font-size: 12px;
+            font-weight: 500;
+            color: #888;
+            text-decoration: none;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            transition: color 0.2s;
+        }
+
+        nav a:hover { color: var(--white); }
+
+        .header-right {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .btn-ai {
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--ink);
+            background: var(--accent2);
+            border: none;
+            padding: 10px 22px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-ai:hover { background: #bf8054; }
+
+        /* ── HERO ───────────────────────────────── */
+        .hero {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            min-height: 88vh;
+            background: var(--ink);
+        }
+
+        .hero-left {
+            padding: 80px 60px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-left::before {
+            content: '';
+            position: absolute;
+            top: -100px;
+            left: -100px;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(212,149,106,0.15) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .hero-eyebrow {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            color: var(--accent2);
+            margin-bottom: 24px;
+        }
+
+        .hero-title {
+            font-family: var(--serif);
+            font-size: clamp(52px, 6vw, 80px);
+            font-weight: 900;
+            line-height: 1.0;
+            color: var(--white);
+            letter-spacing: -1px;
+            margin-bottom: 28px;
+        }
+
+        .hero-title em {
+            font-style: italic;
+            color: var(--accent2);
+        }
+
+        .hero-sub {
+            font-size: 16px;
+            color: #888;
+            line-height: 1.7;
+            max-width: 380px;
+            margin-bottom: 48px;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 14px;
+            align-items: center;
+        }
+
+        .btn-primary {
+            font-family: var(--sans);
+            font-size: 13px;
+            font-weight: 600;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: var(--ink);
+            background: var(--white);
+            border: none;
+            padding: 14px 32px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-primary:hover {
+            background: var(--accent2);
+            color: var(--white);
+        }
+
+        .btn-outline {
+            font-family: var(--sans);
+            font-size: 13px;
+            font-weight: 500;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            color: #888;
+            background: transparent;
+            border: 1px solid #333;
+            padding: 14px 32px;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-outline:hover { border-color: #888; color: var(--white); }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 64px;
+            padding-top: 40px;
+            border-top: 1px solid #1f1f1f;
+        }
+
+        .stat-num {
+            font-family: var(--serif);
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .stat-label {
+            font-size: 11px;
+            color: #555;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            margin-top: 4px;
+        }
+
+        .hero-right {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-right img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            transition: opacity 0.3s;
+        }
+
+        .hero-right::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(135deg, rgba(10,10,10,0.4) 0%, transparent 60%);
+        }
+
+        .hero-tag {
+            position: absolute;
+            bottom: 40px;
+            right: 40px;
+            background: rgba(247,244,239,0.12);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255,255,255,0.1);
+            padding: 16px 20px;
+            border-radius: 4px;
+            z-index: 2;
+        }
+
+        .hero-tag-top {
+            font-size: 10px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent2);
+            margin-bottom: 4px;
+        }
+
+        .hero-tag-val {
+            font-family: var(--serif);
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        /* ── TICKER ─────────────────────────────── */
+        .ticker {
+            background: var(--accent);
+            padding: 12px 0;
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .ticker-inner {
+            display: inline-flex;
+            animation: ticker 20s linear infinite;
+        }
+
+        .ticker span {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--white);
+            padding: 0 40px;
+        }
+
+        .ticker span::before {
+            content: '✦';
+            margin-right: 40px;
+            opacity: 0.6;
+        }
+
+        @keyframes ticker {
+            from { transform: translateX(0); }
+            to { transform: translateX(-50%); }
+        }
+
+        /* ── PRODUKTER ──────────────────────────── */
+        .shop-section {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 80px 60px;
+        }
+
+        .section-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 48px;
+        }
+
+        .section-title {
+            font-family: var(--serif);
+            font-size: 42px;
+            font-weight: 700;
+            line-height: 1.1;
+            letter-spacing: -0.5px;
+        }
+
+        .section-count {
+            font-size: 13px;
+            color: var(--muted);
+            letter-spacing: 1px;
+        }
+
+        /* FILTER */
+        .filters {
+            display: flex;
+            gap: 4px;
+            margin-bottom: 48px;
+            flex-wrap: wrap;
+        }
+
+        .pill {
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 500;
+            letter-spacing: 0.5px;
+            padding: 8px 20px;
+            border-radius: 100px;
+            border: 1px solid #d4cfc9;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .pill.active, .pill:hover {
+            background: var(--ink);
+            color: var(--white);
+            border-color: var(--ink);
+        }
+
+        /* GRID */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 32px;
+        }
+
+        .card {
+            background: var(--card);
+            border-radius: 4px;
+            overflow: hidden;
+            border: 1px solid #ede8e1;
+            transition: transform 0.3s cubic-bezier(0.25,0.46,0.45,0.94), box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 24px 48px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            position: relative;
+            height: 240px;
+            overflow: hidden;
+            background: var(--warm);
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+
+        .card:hover .card-img img { transform: scale(1.07); }
+
+        .card-type-badge {
+            position: absolute;
+            top: 14px;
+            left: 14px;
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--white);
+            background: var(--ink);
+            padding: 5px 12px;
+            border-radius: 100px;
+        }
+
+        .card-wish {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 34px;
+            height: 34px;
+            background: var(--white);
+            border: none;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 14px;
+            opacity: 0;
+            transition: opacity 0.2s;
+        }
+
+        .card:hover .card-wish { opacity: 1; }
+        .card-wish:hover { background: #ffe0db; }
+
+        .card-body { padding: 20px 20px 22px; }
+
+        .card-cat {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 6px;
+        }
+
+        .card-name {
+            font-family: var(--serif);
+            font-size: 19px;
+            font-weight: 700;
+            color: var(--ink);
+            margin-bottom: 6px;
+            line-height: 1.2;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: var(--muted);
+            line-height: 1.55;
+            margin-bottom: 18px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-foot {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: 16px;
+            border-top: 1px solid #f0ebe3;
+        }
+
+        .card-price {
+            font-family: var(--serif);
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--ink);
+        }
+
+        .card-sizes {
+            font-size: 11px;
+            color: var(--muted);
+            margin-top: 2px;
+            letter-spacing: 0.5px;
+        }
+
+        .card-btns { display: flex; gap: 8px; }
+
+        .btn-card-ask {
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 500;
+            padding: 9px 14px;
+            border-radius: 2px;
+            border: 1px solid #d4cfc9;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-card-ask:hover { border-color: var(--ink); color: var(--ink); }
+
+        .btn-card-buy {
+            font-family: var(--sans);
+            font-size: 12px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            padding: 9px 18px;
+            border-radius: 2px;
+            border: none;
+            background: var(--ink);
+            color: var(--white);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-card-buy:hover { background: var(--accent); }
+
+        /* ── KØB MODAL ──────────────────────────── */
+        .overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(10,10,10,0.7);
+            backdrop-filter: blur(6px);
+            z-index: 600;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .overlay.open { display: flex; }
+
+        .modal {
+            background: var(--white);
+            border-radius: 4px;
+            width: 90%;
+            max-width: 520px;
+            overflow: hidden;
+            box-shadow: 0 40px 80px rgba(0,0,0,0.3);
+            animation: modalIn 0.3s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+
+        @keyframes modalIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .modal-img {
+            width: 100%;
+            height: 260px;
+            object-fit: cover;
+        }
+
+        .modal-body { padding: 32px; }
+
+        .modal-cat {
+            font-size: 10px;
+            font-weight: 600;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--accent);
+            margin-bottom: 8px;
+        }
+
+        .modal-name {
+            font-family: var(--serif);
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .modal-desc {
+            font-size: 14px;
+            color: var(--muted);
+            line-height: 1.65;
+            margin-bottom: 20px;
+        }
+
+        .modal-price {
+            font-family: var(--serif);
+            font-size: 30px;
+            font-weight: 700;
+            margin-bottom: 24px;
+        }
+
+        .modal-size-label {
+            font-size: 11px;
+            font-weight: 600;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            color: var(--muted);
+            margin-bottom: 12px;
+        }
+
+        .sizes {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 28px;
+        }
+
+        .sz {
+            font-family: var(--sans);
+            font-size: 13px;
+            font-weight: 500;
+            width: 50px;
+            height: 42px;
+            border: 1px solid #e0dbd4;
+            border-radius: 2px;
+            background: var(--white);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .sz:hover { border-color: var(--ink); }
+        .sz.picked { background: var(--ink); color: var(--white); border-color: var(--ink); }
+
+        .modal-actions { display: flex; gap: 10px; }
+
+        .btn-modal-cancel {
+            font-family: var(--sans);
+            font-size: 13px;
+            font-weight: 500;
+            padding: 14px 22px;
+            border-radius: 2px;
+            border: 1px solid #e0dbd4;
+            background: transparent;
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-modal-cancel:hover { border-color: var(--ink); color: var(--ink); }
+
+        .btn-modal-buy {
+            font-family: var(--sans);
+            flex: 1;
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            padding: 14px;
+            border-radius: 2px;
+            border: none;
+            background: var(--accent);
+            color: var(--white);
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .btn-modal-buy:hover { background: #a8341f; }
+
+        .success-box {
+            margin-top: 16px;
+            padding: 16px;
+            background: #f0faf4;
+            border: 1px solid #b6e8cc;
+            border-radius: 2px;
+            font-size: 14px;
+            color: #1a6640;
+            font-weight: 500;
+            display: none;
+            text-align: center;
+        }
+
+        /* ── CHAT WIDGET ────────────────────────── */
+        .chat-widget {
+            position: fixed;
+            bottom: 28px;
+            right: 28px;
+            z-index: 700;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+
+        .chat-panel {
+            display: none;
+            flex-direction: column;
+            width: 380px;
+            height: 540px;
+            background: var(--white);
+            border-radius: 4px;
+            box-shadow: 0 24px 60px rgba(0,0,0,0.2);
+            overflow: hidden;
+            margin-bottom: 16px;
+            border: 1px solid #ede8e1;
+            animation: slideUp 0.25s cubic-bezier(0.25,0.46,0.45,0.94);
+        }
+
+        .chat-panel.open { display: flex; }
+
+        @keyframes slideUp {
+            from { opacity: 0; transform: translateY(16px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .chat-head {
+            background: var(--ink);
+            padding: 18px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .chat-head-left { display: flex; align-items: center; gap: 12px; }
+
+        .chat-avatar {
+            width: 38px;
+            height: 38px;
+            background: var(--accent2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 16px;
+        }
+
+        .chat-info h4 {
+            font-family: var(--serif);
+            font-size: 15px;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        .chat-info p {
+            font-size: 11px;
+            color: #666;
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .dot {
+            width: 7px;
+            height: 7px;
+            background: #4ade80;
+            border-radius: 50%;
+            display: inline-block;
+        }
+
+        .chat-x {
+            background: none;
+            border: none;
+            color: #555;
+            font-size: 18px;
+            cursor: pointer;
+        }
+
+        .chat-x:hover { color: var(--white); }
+
+        .chat-msgs {
+            flex: 1;
+            overflow-y: auto;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            background: #faf9f7;
+        }
+
+        .bubble {
+            padding: 12px 16px;
+            border-radius: 4px;
+            max-width: 84%;
+            font-size: 14px;
+            line-height: 1.55;
+        }
+
+        .bubble.bot {
+            background: var(--white);
+            border: 1px solid #ede8e1;
+            align-self: flex-start;
+            border-bottom-left-radius: 0;
+        }
+
+        .bubble.user {
+            background: var(--ink);
+            color: var(--white);
+            align-self: flex-end;
+            border-bottom-right-radius: 0;
+        }
+
+        .bubble.typing {
+            background: var(--white);
+            border: 1px solid #ede8e1;
+            align-self: flex-start;
+            color: var(--muted);
+            font-style: italic;
+            font-size: 13px;
+        }
+
+        .chat-quick {
+            padding: 10px 20px 12px;
+            display: flex;
+            gap: 6px;
+            flex-wrap: wrap;
+            background: #faf9f7;
+            border-top: 1px solid #ede8e1;
+        }
+
+        .qbtn {
+            font-family: var(--sans);
+            font-size: 11px;
+            font-weight: 500;
+            padding: 6px 12px;
+            border-radius: 100px;
+            border: 1px solid #d4cfc9;
+            background: var(--white);
+            color: var(--muted);
+            cursor: pointer;
+            transition: all 0.15s;
+        }
+
+        .qbtn:hover { background: var(--ink); color: var(--white); border-color: var(--ink); }
+
+        .chat-input-row {
+            padding: 14px 16px;
+            background: var(--white);
+            border-top: 1px solid #ede8e1;
+            display: flex;
+            gap: 8px;
+        }
+
+        .chat-input {
+            font-family: var(--sans);
+            flex: 1;
+            padding: 10px 14px;
+            border: 1px solid #e0dbd4;
+            border-radius: 2px;
+            font-size: 14px;
+            outline: none;
+            background: var(--cream);
+            transition: border-color 0.2s;
+        }
+
+        .chat-input:focus { border-color: var(--ink); }
+
+        .chat-send {
+            font-family: var(--sans);
+            background: var(--accent);
+            color: var(--white);
+            border: none;
+            padding: 10px 18px;
+            border-radius: 2px;
+            cursor: pointer;
+            font-size: 14px;
+            font-weight: 600;
+            transition: background 0.2s;
+        }
+
+        .chat-send:hover { background: #a8341f; }
+
+        .fab {
+            width: 56px;
+            height: 56px;
+            background: var(--ink);
+            color: var(--white);
+            border: none;
+            border-radius: 50%;
+            font-size: 22px;
+            cursor: pointer;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.25);
+            transition: all 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .fab:hover {
+            background: var(--accent);
+            transform: scale(1.05);
+        }
+
+        /* ── FOOTER ─────────────────────────────── */
+        footer {
+            background: var(--ink);
+            padding: 48px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 80px;
+        }
+
+        .footer-logo {
+            font-family: var(--serif);
+            font-size: 20px;
+            font-weight: 900;
+            color: var(--white);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+        }
+
+        .footer-logo em { color: var(--accent2); font-style: normal; }
+
+        .footer-copy {
+            font-size: 12px;
+            color: #444;
+            letter-spacing: 0.5px;
+        }
+
+        .footer-tag {
+            font-size: 11px;
+            color: #444;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+        }
+
+        .footer-tag span { color: var(--accent2); }
+    </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+    <div class="logo">SKO<em>BOT</em></div>
+    <nav>
+        <a href="#">Nyheder</a>
+        <a href="#">Løbesko</a>
+        <a href="#">Sneakers</a>
+        <a href="#">Tilbud</a>
+    </nav>
+    <div class="header-right">
+        <button class="btn-ai" onclick="toggleChat()">AI Assistent</button>
+    </div>
+</header>
+
+<!-- HERO -->
+<div class="hero">
+    <div class="hero-left">
+        <div class="hero-eyebrow">Ny kollektion 2026</div>
+        <h1 class="hero-title">Find din<br><em>perfekte</em><br>sko.</h1>
+        <p class="hero-sub">Danmarks smarteste skobutik. Vores AI-assistent kender hvert eneste par — fortæl den hvad du har brug for.</p>
+        <div class="hero-actions">
+            <button class="btn-primary" onclick="document.querySelector('.shop-section').scrollIntoView({behavior:'smooth'})">Se sortiment</button>
+            <button class="btn-outline" onclick="toggleChat()">Spørg AI →</button>
+        </div>
+        <div class="hero-stats">
+            <div>
+                <div class="stat-num">10</div>
+                <div class="stat-label">Modeller</div>
+            </div>
+            <div>
+                <div class="stat-num">AI</div>
+                <div class="stat-label">Rådgivning</div>
+            </div>
+            <div>
+                <div class="stat-num">Fra 299</div>
+                <div class="stat-label">Startpris</div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-right">
+        <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=900&q=85" alt="hero">
+        <div class="hero-tag">
+            <div class="hero-tag-top">Bestseller</div>
+            <div class="hero-tag-val">Nike Air Zoom</div>
+        </div>
+    </div>
+</div>
+
+<!-- TICKER -->
+<div class="ticker">
+    <div class="ticker-inner" id="ticker">
+        <span>Gratis retur inden 30 dage</span>
+        <span>AI-drevet personlig rådgivning</span>
+        <span>10+ premium mærker</span>
+        <span>Hurtig levering</span>
+        <span>Gratis retur inden 30 dage</span>
+        <span>AI-drevet personlig rådgivning</span>
+        <span>10+ premium mærker</span>
+        <span>Hurtig levering</span>
+    </div>
+</div>
+
+<!-- SHOP -->
+<div class="shop-section">
+    <div class="section-head">
+        <h2 class="section-title">Vores<br>sortiment</h2>
+        <div class="section-count" id="shoeCount"></div>
+    </div>
+
+    <div class="filters">
+        <button class="pill active" onclick="filterBy('alle', this)">Alle</button>
+        <button class="pill" onclick="filterBy('Løbesko', this)">Løbesko</button>
+        <button class="pill" onclick="filterBy('Sneakers', this)">Sneakers</button>
+        <button class="pill" onclick="filterBy('Vandresko', this)">Vandresko</button>
+        <button class="pill" onclick="filterBy('Trailsko', this)">Trailsko</button>
+        <button class="pill" onclick="filterBy('Hverdagssko', this)">Hverdagssko</button>
+        <button class="pill" onclick="filterBy('Festsko', this)">Festsko</button>
+        <button class="pill" onclick="filterBy('Børnesko', this)">Børnesko</button>
+        <button class="pill" onclick="filterBy('Støvle', this)">Støvle</button>
+        <button class="pill" onclick="filterBy('Konkurrencesko', this)">Konkurrence</button>
+    </div>
+
+    <div class="grid" id="grid">
+        <p style="color:var(--muted); font-size:14px;">Indlæser produkter...</p>
+    </div>
+</div>
+
+<!-- KØB MODAL -->
+<div class="overlay" id="buyOverlay">
+    <div class="modal">
+        <img class="modal-img" id="mImg" src="" alt="">
+        <div class="modal-body">
+            <div class="modal-cat" id="mCat"></div>
+            <div class="modal-name" id="mName"></div>
+            <div class="modal-desc" id="mDesc"></div>
+            <div class="modal-price" id="mPrice"></div>
+            <div class="modal-size-label">Vælg størrelse</div>
+            <div class="sizes" id="sizeGrid"></div>
+            <div class="modal-actions">
+                <button class="btn-modal-cancel" onclick="closeModal()">Annuller</button>
+                <button class="btn-modal-buy" onclick="confirmBuy()">Læg i kurv →</button>
+            </div>
+            <div class="success-box" id="successBox"></div>
+        </div>
+    </div>
+</div>
+
+<!-- CHAT WIDGET -->
+<div class="chat-widget">
+    <div class="chat-panel" id="chatPanel">
+        <div class="chat-head">
+            <div class="chat-head-left">
+                <div class="chat-avatar">🤖</div>
+                <div class="chat-info">
+                    <h4>SkoBot</h4>
+                    <p><span class="dot"></span> Online nu</p>
+                </div>
+            </div>
+            <button class="chat-x" onclick="toggleChat()">✕</button>
+        </div>
+        <div class="chat-msgs" id="chatMsgs">
+            <div class="bubble bot">Hej! 👋 Jeg er SkoBot. Fortæl mig hvad du leder efter — størrelse, type eller budget — så finder jeg den perfekte sko!</div>
+        </div>
+        <div class="chat-quick">
+            <button class="qbtn" onclick="quickAsk('Løbesko til asfalt under 1000 kr')">Løbesko u. 1000 kr</button>
+            <button class="qbtn" onclick="quickAsk('Hvad er jeres billigste sko?')">Billigste sko</button>
+            <button class="qbtn" onclick="quickAsk('Vandresko størrelse 43')">Vandresko str. 43</button>
+        </div>
+        <div class="chat-input-row">
+            <input class="chat-input" id="chatIn" placeholder="Stil et spørgsmål...">
+            <button class="chat-send" onclick="sendMsg()">Send</button>
+        </div>
+    </div>
+    <button class="fab" onclick="toggleChat()">💬</button>
+</div>
+
+<!-- FOOTER -->
+<footer>
+    <div class="footer-logo">SKO<em>BOT</em></div>
+    <div class="footer-copy">© 2026 SkoBot. Alle rettigheder forbeholdes.</div>
+    <div class="footer-tag">Powered by <span>Ollama & RAG</span></div>
+</footer>
+
+<script>
+let allShoes = [], selectedSize = null, currentShoe = null, chatOpen = false;
+
+// ── PRODUKTER ────────────────────────────────────────────
+async function load() {
+    const res = await fetch('/shoes');
+    allShoes = await res.json();
+    render(allShoes);
+}
+
+function render(shoes) {
+    const grid = document.getElementById('grid');
+    document.getElementById('shoeCount').textContent = `${shoes.length} produkter`;
+    grid.innerHTML = '';
+    shoes.forEach(s => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        const img = s.Billede || 'https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600';
+        card.innerHTML = `
+            <div class="card-img">
+                <img src="${img}" alt="${s.Navn}" onerror="this.src='https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600'">
+                <div class="card-type-badge">${s.Type}</div>
+                <button class="card-wish" onclick="quickAsk('Fortæl mig mere om ${s.Navn}')">💬</button>
+            </div>
+            <div class="card-body">
+                <div class="card-cat">${s.Type}</div>
+                <div class="card-name">${s.Navn}</div>
+                <div class="card-desc">${s.Beskrivelse}</div>
+                <div class="card-foot">
+                    <div>
+                        <div class="card-price">${s.Pris}</div>
+                        <div class="card-sizes">Str. ${s.Størrelser}</div>
+                    </div>
+                    <div class="card-btns">
+                        <button class="btn-card-ask" onclick="quickAsk('Fortæl mig mere om ${s.Navn}')">Spørg AI</button>
+                        <button class="btn-card-buy" onclick='openModal(${JSON.stringify(s).replace(/'/g,"&#39;")})'>Køb</button>
+                    </div>
+                </div>
+            </div>`;
+        grid.appendChild(card);
+    });
+}
+
+function filterBy(type, btn) {
+    document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    render(type === 'alle' ? allShoes : allShoes.filter(s => s.Type === type));
+}
+
+// ── MODAL ────────────────────────────────────────────────
+function openModal(shoe) {
+    currentShoe = shoe; selectedSize = null;
+    document.getElementById('mImg').src = shoe.Billede || '';
+    document.getElementById('mCat').textContent = shoe.Type;
+    document.getElementById('mName').textContent = shoe.Navn;
+    document.getElementById('mDesc').textContent = shoe.Beskrivelse;
+    document.getElementById('mPrice').textContent = shoe.Pris;
+    document.getElementById('successBox').style.display = 'none';
+
+    const sg = document.getElementById('sizeGrid');
+    sg.innerHTML = '';
+    const [mn, mx] = shoe.Størrelser.split('-').map(Number);
+    for (let i = mn; i <= mx; i++) {
+        const b = document.createElement('button');
+        b.className = 'sz'; b.textContent = i;
+        b.onclick = () => {
+            document.querySelectorAll('.sz').forEach(x => x.classList.remove('picked'));
+            b.classList.add('picked'); selectedSize = i;
+        };
+        sg.appendChild(b);
+    }
+    document.getElementById('buyOverlay').classList.add('open');
+}
+
+function closeModal() { document.getElementById('buyOverlay').classList.remove('open'); }
+
+async function confirmBuy() {
+    if (!selectedSize) { alert('Vælg venligst en størrelse'); return; }
+    const r = await fetch('/buy', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ shoe_name: currentShoe.Navn, size: selectedSize })
+    });
+    const d = await r.json();
+    const box = document.getElementById('successBox');
+    box.textContent = d.message; box.style.display = 'block';
+    setTimeout(closeModal, 3000);
+}
+
+// ── CHAT ─────────────────────────────────────────────────
+function toggleChat() {
+    chatOpen = !chatOpen;
+    document.getElementById('chatPanel').classList.toggle('open', chatOpen);
+    if (chatOpen) document.getElementById('chatIn').focus();
+}
+
+function quickAsk(text) {
+    chatOpen = true;
+    document.getElementById('chatPanel').classList.add('open');
+    document.getElementById('chatIn').value = text;
+    sendMsg();
+}
+
+function addBubble(text, cls) {
+    const d = document.createElement('div');
+    d.className = `bubble ${cls}`;
+    d.innerHTML = text.replace(/\n/g, '<br>');
+    const m = document.getElementById('chatMsgs');
+    m.appendChild(d); m.scrollTop = m.scrollHeight;
+    return d;
+}
+
+async function sendMsg() {
+    const inp = document.getElementById('chatIn');
+    const txt = inp.value.trim();
+    if (!txt) return;
+    addBubble(txt, 'user'); inp.value = '';
+    const typing = addBubble('SkoBot skriver...', 'typing');
+    try {
+        const r = await fetch('/ask', {
+            method: 'POST',
+            headers: { 'Content-Type': 'application/json' },
+            body: JSON.stringify({ question: txt })
+        });
+        const d = await r.json();
+        typing.remove(); addBubble(d.answer, 'bot');
+    } catch {
+        typing.remove(); addBubble('Noget gik galt. Prøv igen.', 'bot');
+    }
+}
+
+document.getElementById('chatIn').addEventListener('keypress', e => { if (e.key === 'Enter') sendMsg(); });
+
+load();
+</script>
+</body>
+</html>
