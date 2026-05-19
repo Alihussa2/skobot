@@ -1,0 +1,38 @@
+# Quick Start — Run These Commands
+
+## 1. Installér Ollama
+```bash
+# Download fra https://ollama.com/download og installér
+ollama pull mistral
+```
+
+## 2. Opsæt projektet
+```bash
+git clone <dit-repo-url>
+cd course-study-assistant
+python -m venv venv
+source venv/bin/activate        # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+```
+
+## 3. Læg dokumenter i mappen
+```bash
+cp dine-noter.pdf documents/
+```
+
+## 4. Start
+```bash
+# Terminal 1
+ollama serve
+
+# Terminal 2
+source venv/bin/activate
+uvicorn app.main:app --reload --port 8000
+```
+
+## 5. Åbn
+```
+http://localhost:8000
+```
+
+Upload filer → Stil spørgsmål → Få svar.
